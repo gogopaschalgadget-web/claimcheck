@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Healthcare provider's unsecured database exposed patient medical records and personal health information.... - Claim deadline 2026-08-01">
+    <title>Data Breach - Healthcare Provider | ClaimCheck</title>
+    <link rel="canonical" href="https://claimcheck.example.com/settlement/settlement_010.html" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        h1, h2, h3 {
+            margin: 1.5rem 0 0.75rem 0;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #222;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #444;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #666;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin-top: 0;
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .search-box button {
+            padding: 0.75rem 1.5rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #764ba2;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #222;
+            margin: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: #e8e8ff;
+            color: #667eea;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .deadline {
+            color: #d9534f;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .payout {
+            font-size: 1.3rem;
+            color: #27ae60;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .category-card {
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .category-card:hover {
+            background: #667eea;
+            color: white;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .category-card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        footer {
+            background: #222;
+            color: #999;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+            color: #856404;
+        }
+
+        .eligibility-checker {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .eligibility-checker input,
+        .eligibility-checker select,
+        .eligibility-checker textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .eligibility-checker button {
+            background: #27ae60;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            transition: background 0.3s;
+        }
+
+        .eligibility-checker button:hover {
+            background: #229954;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .step {
+            background: white;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .step-number {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1rem;
+        }
+
+        .premium-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .premium-cta h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .premium-cta button {
+            background: white;
+            color: #667eea;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.2s;
+        }
+
+        .premium-cta button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+            .hero { padding: 1.5rem; }
+            nav { flex-direction: column; gap: 1rem; }
+            nav a { margin-left: 0; }
+            .search-box { flex-direction: column; }
+            .category-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">ClaimCheck</a>
+            <div>
+                <a href="/">Home</a>
+                <a href="/how-it-works.html">How It Works</a>
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <h1>Data Breach - Healthcare Provider</h1>
+        <p><strong>Category:</strong> Data Breach | <strong>Deadline:</strong> <span style="color: red;">2026-08-01</span></p>
+
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> This page is for informational purposes only.
+            This is not legal advice. Visit the official settlement website to verify current information and file claims.
+        </div>
+
+        <h2>Settlement Overview</h2>
+        <p>Healthcare provider's unsecured database exposed patient medical records and personal health information.</p>
+
+        <h3>Estimated Payout</h3>
+        <div class="payout">$35 - $250 per claim</div>
+
+        <h2>Eligibility Requirements</h2>
+        <ul class="checklist">
+            <li>Patient 2020-2023</li><li>Records in breach database</li>
+        </ul>
+
+        <div class="eligibility-checker">
+            <h3>Quick Eligibility Check</h3>
+            <p>Answer a few questions to see if you might qualify:</p>
+            <form id="eligibility-form">
+                <label>Have you been affected by this issue?</label>
+                <select>
+                    <option>-- Select --</option>
+                    <option>Yes, definitely</option>
+                    <option>Maybe, not sure</option>
+                    <option>No</option>
+                </select>
+                <label>Do you have documentation?</label>
+                <select>
+                    <option>-- Select --</option>
+                    <option>Yes, receipt/proof</option>
+                    <option>Some documentation</option>
+                    <option>No documentation</option>
+                </select>
+                <button type="submit">Check Eligibility</button>
+            </form>
+        </div>
+
+        <h2>How to File Your Claim</h2>
+        <div class="step">
+            <div class="step-number">Step 1: Review Settlement</div>
+            <p>Visit the official settlement website: <a href="https://example-settlement.com/health-breach" target="_blank">https://example-settlement.com/health-breach</a></p>
+        </div>
+        <div class="step">
+            <div class="step-number">Step 2: Verify Eligibility</div>
+            <p>Confirm you meet ALL the eligibility criteria listed above.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">Step 3: Gather Documents</div>
+            <p>Collect proof of purchase, account info, or other required documentation.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">Step 4: File Online</div>
+            <p>Complete the claim form at the settlement website. Most claims can be filed online.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">Step 5: Track Status</div>
+            <p>Keep your confirmation number and monitor claim status online.</p>
+        </div>
+
+        <div style="background: #e8f4f8; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+            <h3 style="margin-top: 0;">Time is running out</h3>
+            <p><strong>Claim deadline: 2026-08-01</strong></p>
+            <p>Submit your claim before the deadline to be eligible for compensation.</p>
+            <a href="https://example-settlement.com/health-breach" target="_blank" style="display: inline-block; background: #667eea; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; margin-top: 0.5rem;">
+                File Claim Now
+            </a>
+        </div>
+
+        <div class="premium-cta">
+            <h3>Don't Miss Any Settlements</h3>
+            <p>Upgrade to ClaimCheck Pro for automatic settlement matching and filing reminders.</p>
+            <button>Learn More About Pro</button>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ClaimCheck. All rights reserved.</p>
+        <p>
+            <strong>Disclaimer:</strong> ClaimCheck is not a law firm and does not provide legal advice.
+            Settlement information is for informational purposes only. Always verify information directly
+            with official settlement administrators. We are not affiliated with settlement administrators
+            or the courts.
+        </p>
+        <p>
+            <a href="/about.html">About</a> |
+            <a href="/how-it-works.html">How It Works</a>
+        </p>
+    </footer>
+</body>
+</html>
