@@ -1,556 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6ZLDKMTPKP');
-</script>
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6ZLDKMTPKP');
+    </script>
     <meta charset="UTF-8">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Search class action lawsuit settlements and file claims online">
-    <title>Find Settlements & Claim Money | ClaimCheck</title>
-    <link rel="canonical" href="https://claimcheck.example.com/" />
-    
+    <meta name="description" content="ClaimCheck — Find open class action settlements and claim money you may be owed. Search 30+ active settlements across automotive, data breach, healthcare, and more.">
+    <title>ClaimCheck — Find Class Action Settlements & Claim Your Money</title>
+    <link rel="canonical" href="https://gogopaschalgadget-web.github.io/claimcheck/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --emerald: #059669;
+            --emerald-dark: #047857;
+            --emerald-light: #ECFDF5;
+            --navy: #0F172A;
+            --blue: #2563EB;
+            --blue-light: #EFF6FF;
+            --amber: #D97706;
+            --red: #DC2626;
+            --text: #1E293B;
+            --text-mid: #475569;
+            --text-light: #94A3B8;
+            --bg: #F8FAFC;
+            --white: #FFFFFF;
+            --border: #E2E8F0;
+            --radius: 12px;
         }
-
-        html {
-            font-size: 16px;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
         }
 
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1.5rem 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        /* Top Bar */
+        .top-bar {
+            background: var(--navy);
+            color: rgba(255,255,255,0.8);
+            font-size: 13px;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            align-items: center;
+        }
+        .top-bar span { display: flex; align-items: center; gap: 6px; }
+        .top-bar i { color: var(--emerald); font-size: 12px; }
+
+        /* Nav */
+        .navbar {
+            background: var(--white);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            border-bottom: 1px solid var(--border);
         }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1.5rem;
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 24px; height: 64px;
         }
-
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-            color: white;
+            font-size: 22px; font-weight: 800; text-decoration: none; color: var(--emerald-dark);
+            display: flex; align-items: center; gap: 8px;
         }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-size: 0.95rem;
-            transition: opacity 0.3s;
+        .logo-icon {
+            background: var(--emerald); color: white;
+            width: 34px; height: 34px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center; font-size: 16px;
         }
-
-        nav a:hover {
-            opacity: 0.8;
+        .nav-links { list-style: none; display: flex; gap: 4px; align-items: center; }
+        .nav-links a {
+            color: var(--text-mid); text-decoration: none; font-size: 14px; font-weight: 600;
+            padding: 8px 16px; border-radius: 8px; transition: all 0.25s;
         }
+        .nav-links a:hover { background: var(--emerald-light); color: var(--emerald-dark); }
+        .nav-cta { background: var(--emerald) !important; color: white !important; font-weight: 700 !important; }
+        .nav-cta:hover { background: var(--emerald-dark) !important; }
+        .menu-toggle { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text); }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-
-        h1, h2, h3 {
-            margin: 1.5rem 0 0.75rem 0;
-            line-height: 1.3;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #222;
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: #444;
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            color: #666;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
+        /* Hero */
         .hero {
-            background: white;
-            border-radius: 8px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            text-align: center;
+            background: linear-gradient(150deg, var(--navy) 0%, #1E3A5F 50%, var(--emerald-dark) 100%);
+            color: white; padding: 70px 24px 80px; text-align: center;
+            position: relative; overflow: hidden;
         }
-
-        .hero h1 {
-            margin-top: 0;
-            font-size: 2.8rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .hero::before {
+            content: ''; position: absolute; top: -100px; right: -80px;
+            width: 400px; height: 400px; background: rgba(5,150,105,0.1); border-radius: 50%;
         }
-
-        .search-box {
-            display: flex;
-            gap: 0.5rem;
-            margin: 1.5rem 0;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+        .hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 2; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px; padding: 6px 18px; font-size: 13px; font-weight: 600;
+            margin-bottom: 24px; backdrop-filter: blur(8px);
         }
-
-        .search-box input {
-            flex: 1;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
+        .hero h1 { font-size: 44px; font-weight: 900; line-height: 1.15; margin-bottom: 16px; letter-spacing: -1.5px; }
+        .hero h1 .accent { color: #6EE7B7; }
+        .hero .subtitle { font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
+        .search-wrap {
+            max-width: 560px; margin: 0 auto;
+            display: flex; gap: 0; border-radius: 14px; overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
-
-        .search-box button {
-            padding: 0.75rem 1.5rem;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s;
+        .search-wrap input {
+            flex: 1; padding: 18px 24px; border: none; font-size: 16px;
+            font-family: inherit; outline: none; background: white; color: var(--text);
         }
-
-        .search-box button:hover {
-            background: #764ba2;
+        .search-wrap button {
+            padding: 18px 28px; background: var(--emerald); color: white;
+            border: none; font-size: 16px; font-weight: 700; cursor: pointer;
+            font-family: inherit; transition: background 0.3s;
         }
+        .search-wrap button:hover { background: var(--emerald-dark); }
 
-        .card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
+        /* Trust */
+        .trust-bar { background: var(--white); border-bottom: 3px solid var(--emerald); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .trust-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(4, 1fr); text-align: center;
         }
+        .trust-item { padding: 24px 12px; border-right: 1px solid var(--border); }
+        .trust-item:last-child { border-right: none; }
+        .trust-number { font-size: 26px; font-weight: 900; color: var(--emerald-dark); }
+        .trust-label { font-size: 12px; color: var(--text-light); font-weight: 600; }
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 0.5rem;
-        }
-
-        .card-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #222;
-            margin: 0;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.3rem 0.8rem;
-            background: #e8e8ff;
-            color: #667eea;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .deadline {
-            color: #d9534f;
-            font-weight: 600;
-            margin-top: 0.5rem;
-        }
-
-        .payout {
-            font-size: 1.3rem;
-            color: #27ae60;
-            font-weight: bold;
-            margin: 0.5rem 0;
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .category-card {
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .category-card:hover {
-            background: #667eea;
-            color: white;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-        }
-
-        .category-card a {
-            color: inherit;
-            text-decoration: none;
-            display: block;
-        }
-
-        footer {
-            background: #222;
-            color: #999;
-            padding: 2rem;
-            margin-top: 3rem;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #ddd;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
+        /* Disclaimer */
         .disclaimer {
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            border-radius: 4px;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            font-size: 0.9rem;
-            color: #856404;
+            max-width: 1200px; margin: 24px auto 0; padding: 0 24px;
         }
+        .disclaimer-inner {
+            background: #FFFBEB; border: 1px solid #FDE68A; border-radius: var(--radius);
+            padding: 14px 20px; font-size: 13px; color: #92400E;
+            display: flex; align-items: flex-start; gap: 10px;
+        }
+        .disclaimer-inner i { font-size: 16px; color: var(--amber); margin-top: 2px; }
 
-        .eligibility-checker {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        /* Section */
+        .section { max-width: 1200px; margin: 0 auto; padding: 50px 24px; }
+        .section-header { margin-bottom: 32px; }
+        .section-label {
+            display: inline-block; background: var(--emerald-light); color: var(--emerald-dark);
+            font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+            padding: 5px 14px; border-radius: 50px; margin-bottom: 12px;
         }
+        .section-header h2 { font-size: 28px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+        .section-header p { font-size: 15px; color: var(--text-mid); }
 
-        .eligibility-checker input,
-        .eligibility-checker select,
-        .eligibility-checker textarea {
-            width: 100%;
-            padding: 0.75rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 0.95rem;
+        /* Settlement Cards */
+        .settlements-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+        .settle-card {
+            background: var(--white); border-radius: var(--radius); border: 1px solid var(--border);
+            overflow: hidden; transition: all 0.3s; text-decoration: none; color: inherit;
         }
+        .settle-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.08); transform: translateY(-3px); border-color: var(--emerald); }
+        .settle-card-body { padding: 24px; }
+        .settle-card .badge-row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+        .settle-badge {
+            background: var(--blue-light); color: var(--blue); font-size: 11px; font-weight: 700;
+            padding: 3px 10px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .settle-deadline {
+            font-size: 12px; color: var(--red); font-weight: 600;
+            display: flex; align-items: center; gap: 4px; margin-left: auto;
+        }
+        .settle-card h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.3; }
+        .settle-card .desc { font-size: 13px; color: var(--text-mid); margin-bottom: 16px; line-height: 1.5; }
+        .settle-payout {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--emerald-light); color: var(--emerald-dark);
+            font-size: 18px; font-weight: 800; padding: 8px 16px; border-radius: 8px;
+        }
+        .settle-payout i { font-size: 14px; }
 
-        .eligibility-checker button {
-            background: #27ae60;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            margin-top: 0.5rem;
-            transition: background 0.3s;
+        /* Categories */
+        .cats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; }
+        .cat-btn {
+            display: flex; align-items: center; gap: 10px;
+            background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 18px 20px; text-decoration: none; color: var(--text);
+            font-weight: 600; font-size: 14px; transition: all 0.3s;
         }
+        .cat-btn:hover { border-color: var(--emerald); box-shadow: 0 4px 12px rgba(5,150,105,0.1); transform: translateY(-2px); }
+        .cat-btn i { font-size: 20px; color: var(--emerald); width: 24px; text-align: center; }
 
-        .eligibility-checker button:hover {
-            background: #229954;
+        /* CTA */
+        .cta-banner {
+            background: linear-gradient(150deg, var(--emerald-dark), var(--emerald));
+            padding: 60px 24px; text-align: center; color: white;
         }
+        .cta-banner h2 { font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+        .cta-banner p { font-size: 16px; opacity: 0.95; margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .cta-banner .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: white; color: var(--emerald-dark); text-decoration: none;
+            padding: 16px 32px; border-radius: 10px; font-size: 16px; font-weight: 800;
+            transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .cta-banner .btn-white:hover { transform: translateY(-2px); }
 
-        .checklist {
-            list-style: none;
-            padding: 0;
-        }
+        /* Ad */
+        .ad-slot { text-align: center; max-width: 1200px; margin: 0 auto; padding: 16px 24px; }
 
-        .checklist li {
-            padding: 0.75rem 0;
-            padding-left: 1.5rem;
-            position: relative;
+        /* Footer */
+        footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 50px 24px 24px; }
+        .footer-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 32px;
         }
-
-        .checklist li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #27ae60;
-            font-weight: bold;
+        .footer-brand p { font-size: 14px; line-height: 1.7; margin-top: 10px; }
+        .footer-col h4 { color: white; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+        .footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; padding: 3px 0; transition: color 0.3s; }
+        .footer-col a:hover { color: #6EE7B7; }
+        .footer-bottom {
+            max-width: 1200px; margin: 0 auto;
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center;
         }
-
-        .step {
-            background: white;
-            border-left: 4px solid #667eea;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
-
-        .step-number {
-            font-weight: bold;
-            color: #667eea;
-            font-size: 1.1rem;
-        }
-
-        .premium-cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .premium-cta h3 {
-            color: white;
-            margin-top: 0;
-        }
-
-        .premium-cta button {
-            background: white;
-            color: #667eea;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: transform 0.2s;
-        }
-
-        .premium-cta button:hover {
-            transform: scale(1.05);
-        }
+        .footer-disclaimer { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 8px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .footer-copy { font-size: 13px; }
 
         @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.4rem; }
-            .hero { padding: 1.5rem; }
-            nav { flex-direction: column; gap: 1rem; }
-            nav a { margin-left: 0; }
-            .search-box { flex-direction: column; }
-            .category-grid { grid-template-columns: 1fr; }
+            .top-bar { font-size: 11px; gap: 10px; flex-wrap: wrap; }
+            .menu-toggle { display: block; }
+            .nav-links {
+                display: none; position: absolute; top: 64px; left: 0; right: 0;
+                background: white; flex-direction: column; padding: 16px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { width: 100%; padding: 12px 16px; }
+            .hero { padding: 50px 20px 60px; }
+            .hero h1 { font-size: 30px; }
+            .search-wrap { flex-direction: column; border-radius: 12px; }
+            .search-wrap input { border-radius: 0; }
+            .search-wrap button { border-radius: 0; }
+            .trust-inner { grid-template-columns: repeat(2, 1fr); }
+            .settlements-grid { grid-template-columns: 1fr; }
+            .cats-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+            .section { padding: 36px 16px; }
         }
     </style>
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">ClaimCheck</a>
-            <div>
-                <a href="/">Home</a>
-                <a href="/how-it-works.html">How It Works</a>
-                <a href="/about.html">About</a>
-            </div>
-        </nav>
-    </header>
+    <div class="top-bar">
+        <span><i class="fas fa-check-circle"></i> 30+ Active Settlements</span>
+        <span><i class="fas fa-shield-alt"></i> Free to Search</span>
+        <span><i class="fas fa-clock"></i> Updated Daily</span>
+    </div>
 
-    <main class="container">
-        
-        <div class="hero">
-            <h1>Find Unclaimed Settlements</h1>
-            <p style="font-size: 1.1rem;">Search thousands of class action lawsuit settlements and claim money you may be owed.</p>
-            <div class="search-box">
-                <input type="text" id="search" placeholder="Search settlements..." />
-                <button onclick="performSearch()">Search</button>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="/claimcheck/" class="logo">
+                <span class="logo-icon"><i class="fas fa-balance-scale"></i></span>
+                ClaimCheck
+            </a>
+            <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/claimcheck/">Settlements</a></li>
+                <li><a href="/claimcheck/how-it-works.html">How It Works</a></li>
+                <li><a href="/claimcheck/about.html">About</a></li>
+                <li><a href="/claimcheck/blog/">Blog</a></li>
+                <li><a href="#settlements" class="nav-cta">Search Settlements</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge"><i class="fas fa-gavel"></i> Updated March 2026</div>
+            <h1>Find Unclaimed <span class="accent">Settlement Money</span></h1>
+            <p class="subtitle">Search thousands of class action settlements and claim money you may be owed. It takes 2 minutes.</p>
+            <div class="search-wrap">
+                <input type="text" id="search" placeholder="Search settlements (e.g., data breach, auto recall...)" />
+                <button onclick="performSearch()"><i class="fas fa-search"></i> Search</button>
             </div>
         </div>
+    </section>
 
-        <div class="disclaimer">
-            <strong>⚖️ Important:</strong> ClaimCheck provides settlement information for educational purposes only.
-            This is not legal advice. Always verify settlement details directly with official administrators.
-            Visit the official settlement website to file your claim.
+    <div class="trust-bar">
+        <div class="trust-inner">
+            <div class="trust-item">
+                <div class="trust-number">30+</div>
+                <div class="trust-label">Active Settlements</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">9</div>
+                <div class="trust-label">Categories</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">$15K+</div>
+                <div class="trust-label">Max Payout</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">Free</div>
+                <div class="trust-label">To Search & Claim</div>
+            </div>
         </div>
+    </div>
 
-        <h2>Featured Settlements</h2>
-        
-            <a href="/settlement/settlement_019.html" class="card" style="text-decoration: none; color: inherit;">
-                <div class="card-header">
-                    <h3 class="card-title">Vehicle Emissions Fraud</h3>
-                    <span class="badge">Automotive</span>
-                </div>
-                <p>Automaker installed software to cheat emissions tests while selling vehicles as environmentally friendly....</p>
-                <div class="payout">$1,000 - $10,000</div>
-                <div class="deadline">Deadline: 2026-10-15</div>
-            </a>
-            
-            <a href="/settlement/settlement_001.html" class="card" style="text-decoration: none; color: inherit;">
-                <div class="card-header">
-                    <h3 class="card-title">Social Media Data Privacy Settlement</h3>
-                    <span class="badge">Data Breach</span>
-                </div>
-                <p>Major social media platform agreed to settle claims regarding unauthorized data collection and privacy violations....</p>
-                <div class="payout">$50 - $300</div>
-                <div class="deadline">Deadline: 2026-09-30</div>
-            </a>
-            
-            <a href="/settlement/settlement_003.html" class="card" style="text-decoration: none; color: inherit;">
-                <div class="card-header">
-                    <h3 class="card-title">Data Breach - Retail Payment Cards</h3>
-                    <span class="badge">Data Breach</span>
-                </div>
-                <p>Major retailer's payment system breach exposed customer credit card data. Settlement fund for fraud monitoring and credit protection....</p>
-                <div class="payout">$25 - $150</div>
-                <div class="deadline">Deadline: 2026-07-20</div>
-            </a>
-            
-            <a href="/settlement/settlement_027.html" class="card" style="text-decoration: none; color: inherit;">
-                <div class="card-header">
-                    <h3 class="card-title">Nursing Home Care Violations</h3>
-                    <span class="badge">Healthcare</span>
-                </div>
-                <p>Nursing home chain provided inadequate care and staffing, violating safety standards....</p>
-                <div class="payout">$2,000 - $15,000</div>
-                <div class="deadline">Deadline: 2026-12-01</div>
-            </a>
-            
-            <a href="/settlement/settlement_013.html" class="card" style="text-decoration: none; color: inherit;">
-                <div class="card-header">
-                    <h3 class="card-title">Mortgage Rate Fixing</h3>
-                    <span class="badge">Financial Services</span>
-                </div>
-                <p>Mortgage lenders engaged in illegal rate-fixing practices, costing borrowers higher interest rates and additional fees....</p>
-                <div class="payout">$500 - $3,000</div>
-                <div class="deadline">Deadline: 2026-10-30</div>
-            </a>
-            
-
-        <h2 style="margin-top: 3rem;">Browse by Category</h2>
-        <div class="category-grid">
-            
-            <div class="category-card">
-                <a href="/category/automotive.html">
-                    <h3 style="margin: 0;">Automotive</h3>
-                    <p style="margin: 0; font-size: 0.9rem;">Browse Settlements</p>
-                </a>
-            </div>
-            
-            <div class="category-card">
-                <a href="/category/consumer_products.html">
-                    <h3 style="margin: 0;">Consumer Products</h3>
-                    <p style="margin: 0; font-size: 0.9rem;">Browse Settlements</p>
-                </a>
-            </div>
-            
-            <div class="category-card">
-                <a href="/category/data_breach.html">
-                    <h3 style="margin: 0;">Data Breach</h3>
-                    <p style="margin: 0; font-size: 0.9rem;">Browse Settlements</p>
-                </a>
-            </div>
-            
-            <div class="category-card">
-                <a href="/category/employment.html">
-                    <h3 style="margin: 0;">Employment</h3>
-                    <p style="margin: 0; font-size: 0.9rem;">Browse Settlements</p>
-                </a>
-            </div>
-            
-            <div class="category-card">
-                <a href="/category/financial_services.html">
-                    <h3 style="margin: 0;">Financial Services</h3>
-                    <p style="margin: 0; font-size: 0.9rem;">Browse Settlements</p>
-                </a>
-            </div>
-            
-            <div class="category-card">
-                <a href="/category/food_beverage.html">
-                    <h3 style="margin: 0;">Food Beverage</h3>
-                    <p style="margin: 0; font-size: 0.9rem;">Browse Settlements</p>
-                </a>
-            </div>
-            
-            <div class="category-card">
-                <a href="/category/healthcare.html">
-                    <h3 style="margin: 0;">Healthcare</h3>
-                    <p style="margin: 0; font-size: 0.9rem;">Browse Settlements</p>
-                </a>
-            </div>
-            
-            <div class="category-card">
-                <a href="/category/retail.html">
-                    <h3 style="margin: 0;">Retail</h3>
-                    <p style="margin: 0; font-size: 0.9rem;">Browse Settlements</p>
-                </a>
-            </div>
-            
-            <div class="category-card">
-                <a href="/category/tech.html">
-                    <h3 style="margin: 0;">Tech</h3>
-                    <p style="margin: 0; font-size: 0.9rem;">Browse Settlements</p>
-                </a>
-            </div>
-            
+    <div class="disclaimer">
+        <div class="disclaimer-inner">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span><strong>Legal Notice:</strong> ClaimCheck provides settlement information for educational purposes only. This is not legal advice. Always verify details with official settlement administrators before filing a claim.</span>
         </div>
+    </div>
 
-        <div class="premium-cta">
-            <h3>Get Notified of New Settlements</h3>
-            <p>Join ClaimCheck Pro to automatically monitor and get alerts for settlements matching your profile.</p>
-            <button>Try Free for 7 Days</button>
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5182415121977508" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="section" id="settlements">
+        <div class="section-header">
+            <span class="section-label">Featured</span>
+            <h2>Open Settlements You Can Claim Now</h2>
+            <p>These settlements are currently accepting claims. Deadlines are approaching — act soon.</p>
         </div>
+        <div class="settlements-grid">
+            <a href="/claimcheck/settlement/settlement_019.html" class="settle-card">
+                <div class="settle-card-body">
+                    <div class="badge-row">
+                        <span class="settle-badge">Automotive</span>
+                        <span class="settle-deadline"><i class="fas fa-clock"></i> Deadline: Oct 15, 2026</span>
+                    </div>
+                    <h3>Vehicle Emissions Fraud</h3>
+                    <p class="desc">Automaker installed software to cheat emissions tests while selling vehicles as environmentally friendly.</p>
+                    <div class="settle-payout"><i class="fas fa-dollar-sign"></i> $1,000 – $10,000</div>
+                </div>
+            </a>
 
-        <script>
-        function performSearch() {
-            const query = document.getElementById('search').value;
-            if (query) {
-                window.location.href = '/?q=' + encodeURIComponent(query);
-            }
-        }
-        </script>
-        
-    </main>
+            <a href="/claimcheck/settlement/settlement_001.html" class="settle-card">
+                <div class="settle-card-body">
+                    <div class="badge-row">
+                        <span class="settle-badge">Data Breach</span>
+                        <span class="settle-deadline"><i class="fas fa-clock"></i> Deadline: Sep 30, 2026</span>
+                    </div>
+                    <h3>Social Media Data Privacy Settlement</h3>
+                    <p class="desc">Major social media platform agreed to settle claims regarding unauthorized data collection and privacy violations.</p>
+                    <div class="settle-payout"><i class="fas fa-dollar-sign"></i> $50 – $300</div>
+                </div>
+            </a>
+
+            <a href="/claimcheck/settlement/settlement_003.html" class="settle-card">
+                <div class="settle-card-body">
+                    <div class="badge-row">
+                        <span class="settle-badge">Data Breach</span>
+                        <span class="settle-deadline"><i class="fas fa-clock"></i> Deadline: Jul 20, 2026</span>
+                    </div>
+                    <h3>Data Breach — Retail Payment Cards</h3>
+                    <p class="desc">Major retailer's payment system breach exposed customer credit card data. Settlement fund for fraud monitoring.</p>
+                    <div class="settle-payout"><i class="fas fa-dollar-sign"></i> $25 – $150</div>
+                </div>
+            </a>
+
+            <a href="/claimcheck/settlement/settlement_027.html" class="settle-card">
+                <div class="settle-card-body">
+                    <div class="badge-row">
+                        <span class="settle-badge">Healthcare</span>
+                        <span class="settle-deadline"><i class="fas fa-clock"></i> Deadline: Dec 1, 2026</span>
+                    </div>
+                    <h3>Nursing Home Care Violations</h3>
+                    <p class="desc">Nursing home chain provided inadequate care and staffing, violating safety standards.</p>
+                    <div class="settle-payout"><i class="fas fa-dollar-sign"></i> $2,000 – $15,000</div>
+                </div>
+            </a>
+
+            <a href="/claimcheck/settlement/settlement_013.html" class="settle-card">
+                <div class="settle-card-body">
+                    <div class="badge-row">
+                        <span class="settle-badge">Financial</span>
+                        <span class="settle-deadline"><i class="fas fa-clock"></i> Deadline: Oct 30, 2026</span>
+                    </div>
+                    <h3>Mortgage Rate Fixing</h3>
+                    <p class="desc">Mortgage lenders engaged in illegal rate-fixing practices, costing borrowers higher interest rates.</p>
+                    <div class="settle-payout"><i class="fas fa-dollar-sign"></i> $500 – $3,000</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="section-header">
+            <span class="section-label">Categories</span>
+            <h2>Browse by Category</h2>
+        </div>
+        <div class="cats-grid">
+            <a href="/claimcheck/category/automotive.html" class="cat-btn"><i class="fas fa-car"></i> Automotive</a>
+            <a href="/claimcheck/category/consumer_products.html" class="cat-btn"><i class="fas fa-shopping-bag"></i> Consumer Products</a>
+            <a href="/claimcheck/category/data_breach.html" class="cat-btn"><i class="fas fa-lock"></i> Data Breach</a>
+            <a href="/claimcheck/category/employment.html" class="cat-btn"><i class="fas fa-briefcase"></i> Employment</a>
+            <a href="/claimcheck/category/financial_services.html" class="cat-btn"><i class="fas fa-university"></i> Financial</a>
+            <a href="/claimcheck/category/food_beverage.html" class="cat-btn"><i class="fas fa-utensils"></i> Food & Beverage</a>
+            <a href="/claimcheck/category/healthcare.html" class="cat-btn"><i class="fas fa-heartbeat"></i> Healthcare</a>
+            <a href="/claimcheck/category/retail.html" class="cat-btn"><i class="fas fa-store"></i> Retail</a>
+            <a href="/claimcheck/category/tech.html" class="cat-btn"><i class="fas fa-microchip"></i> Tech</a>
+        </div>
+    </section>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5182415121977508" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="cta-banner">
+        <h2>Never Miss a Settlement</h2>
+        <p>Join ClaimCheck Pro to get automatic alerts for new settlements matching your profile.</p>
+        <a href="#" class="btn-white"><i class="fas fa-bell"></i> Try Free for 7 Days</a>
+    </section>
 
     <footer>
-        <p>&copy; 2026 ClaimCheck. All rights reserved.</p>
-        <p>
-            <strong>Disclaimer:</strong> ClaimCheck is not a law firm and does not provide legal advice.
-            Settlement information is for informational purposes only. Always verify information directly
-            with official settlement administrators. We are not affiliated with settlement administrators
-            or the courts.
-        </p>
-        <p>
-            <a href="/about.html">About</a> |
-            <a href="/how-it-works.html">How It Works</a>
-        </p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="/claimcheck/" class="logo" style="color:#6EE7B7;">
+                    <span class="logo-icon"><i class="fas fa-balance-scale"></i></span>
+                    ClaimCheck
+                </a>
+                <p>Find open class action settlements and claim money you may be owed. Free settlement search across 9 categories.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <a href="/claimcheck/category/data_breach.html">Data Breach</a>
+                <a href="/claimcheck/category/automotive.html">Automotive</a>
+                <a href="/claimcheck/category/healthcare.html">Healthcare</a>
+                <a href="/claimcheck/category/financial_services.html">Financial</a>
+                <a href="/claimcheck/category/employment.html">Employment</a>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <a href="/claimcheck/how-it-works.html">How It Works</a>
+                <a href="/claimcheck/about.html">About</a>
+                <a href="/claimcheck/blog/">Blog</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-disclaimer">ClaimCheck is not a law firm and does not provide legal advice. Settlement information is for informational purposes only. Always verify information directly with official settlement administrators. We are not affiliated with any settlement administrators or courts.</p>
+            <p class="footer-copy">&copy; 2026 ClaimCheck. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+    function performSearch() {
+        const query = document.getElementById('search').value;
+        if (query) { window.location.href = '/claimcheck/?q=' + encodeURIComponent(query); }
+    }
+    document.getElementById('search').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') performSearch();
+    });
+    </script>
 </body>
 </html>
