@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://claimcheck.example.com/sitemap.xml
+Sitemap: https://gogopaschalgadget-web.github.io/claimcheck/sitemap.xml
