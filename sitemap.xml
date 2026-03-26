@@ -167,5 +167,10 @@
   <url>
     <loc>https://claimcheck.example.com/category/tech.html</loc>
     <priority>0.7</priority>
+  <url>
+    <loc>https://claimcheck.example.com/blog/check-settlement-eligibility-guide.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-26</lastmod>
   </url>
 </urlset>
